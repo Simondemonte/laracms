@@ -23,11 +23,17 @@ Route::get('/insert', function(){
 
 Route::get('/read', function(){
 	$results = DB::select("SELECT * FROM posts1 WHERE id =?", [1]);
-	//foreach($results as $posts){
-		//return $posts->title;
-	//}
-	return $results;
+	foreach($results as $posts){
+		return $posts->title;
+	}
+	//return $results;
 });
+
+Route::get('/update', function(){
+		$updated = DB:: update("UPDATE posts1 SET title ='update title' WHERE id =?",[1]);
+		return $updated;
+});
+
 //Route::get('/post/{id}','PostController@index');
 
 Route::resource('post', 'PostController');
