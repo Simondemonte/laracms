@@ -15,6 +15,11 @@
 //return view('welcome');
 //	return "Hi Guys...";
 //});
+
+Route::get('/insert', function(){
+	DB::insert("INSERT INTO posts1(title, content) values(?, ?)",
+			['PHP with Laravel', 'Laravel is the Best Thing That Happen to PHP']);
+});
 //Route::get('/post/{id}','PostController@index');
 
 Route::resource('post', 'PostController');
