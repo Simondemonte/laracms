@@ -45,7 +45,11 @@ Route::get('/basicupdate', function(){
 		
 		$post->save();
 });
-//Route::get('/', function () {
+
+Route::get('/update', function(){
+	Post::where('id',2)->where('is_admin',0)->update(['title'=>'NEW PHP TITLE','content'=>'I love learning Laravel']);
+});
+	//Route::get('/', function () {
 
 //    return view('welcome');
 
