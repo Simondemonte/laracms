@@ -25,6 +25,13 @@ Route::get('/findwhere', function(){
 	$posts = Post::where('is_admin',0)->orderBy('id', 'desc')->take(1)->get();
 	return $posts;
 });
+
+Route::get('basicinsert', function(){
+	$post = new Post;
+	$post->title = 'New Eloquent Title';
+	$post->content = 'Wow Eloquent is really cool';
+	$post->save();
+});
 //Route::get('/', function () {
 
 //    return view('welcome');
