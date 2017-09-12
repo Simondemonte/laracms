@@ -23,4 +23,11 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+public function post(){
+		return $this->hasOne('App\Post');
+		//hasOne(RELATEDMODEL, FOREIGNKEY);
+		//RELATEDMODEL adalah model yang ingin direlasikan dengan User, yaitu Post
+		// secara default FOREIGNKEY adalah MODELNAME_id
+		// dalam kasus ini user_id	
+	}
 }
