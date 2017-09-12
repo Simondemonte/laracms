@@ -1,6 +1,7 @@
 <?php
 use App\Post;
 use App\User;
+use App\Country;
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -104,6 +105,13 @@ Route::get('/forcedelete', function(){
 						echo $role->pivot->created_at;
 				}
 		});
+			//Has many through relation
+		Route::get('/user/country', function(){
+			$country = Country::find(1);
+			foreach($country->posts as $post){
+				return $post->title;
+			}
+	});
 	//Route::get('/', function () {
 
 //    return view('welcome');

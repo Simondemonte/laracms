@@ -6,9 +6,11 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'AddCountryIdColumnToUsers' => $baseDir . '/database/migrations/2017_09_12_181836_add_country_id_column_to_users.php',
     'AddDeletedAtColumnToPostsTables' => $baseDir . '/database/migrations/2017_09_12_170638_add_deleted_at_column_to_posts_tables.php',
     'AddIsAdminColumnToPosts1Tables' => $baseDir . '/database/migrations/2017_09_09_182316_add_is_admin_column_to_posts1_tables.php',
     'AddIsAdminColumnToPostsTables' => $baseDir . '/database/migrations/2017_09_11_190800_add_is_admin_column_to_posts_tables.php',
+    'CreateCountriesTable' => $baseDir . '/database/migrations/2017_09_12_181812_create_countries_table.php',
     'CreatePasswordResetsTable' => $baseDir . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
     'CreatePosts1Table' => $baseDir . '/database/migrations/2017_09_09_181718_create_posts1_table.php',
     'CreatePostsTable' => $baseDir . '/database/migrations/2017_09_11_190502_create_posts_table.php',

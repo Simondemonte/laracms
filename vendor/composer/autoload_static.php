@@ -263,9 +263,11 @@ class ComposerStaticInited320adb7e2ba869b02984ee5a5c9bf1
     );
 
     public static $classMap = array (
+        'AddCountryIdColumnToUsers' => __DIR__ . '/../..' . '/database/migrations/2017_09_12_181836_add_country_id_column_to_users.php',
         'AddDeletedAtColumnToPostsTables' => __DIR__ . '/../..' . '/database/migrations/2017_09_12_170638_add_deleted_at_column_to_posts_tables.php',
         'AddIsAdminColumnToPosts1Tables' => __DIR__ . '/../..' . '/database/migrations/2017_09_09_182316_add_is_admin_column_to_posts1_tables.php',
         'AddIsAdminColumnToPostsTables' => __DIR__ . '/../..' . '/database/migrations/2017_09_11_190800_add_is_admin_column_to_posts_tables.php',
+        'CreateCountriesTable' => __DIR__ . '/../..' . '/database/migrations/2017_09_12_181812_create_countries_table.php',
         'CreatePasswordResetsTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
         'CreatePosts1Table' => __DIR__ . '/../..' . '/database/migrations/2017_09_09_181718_create_posts1_table.php',
         'CreatePostsTable' => __DIR__ . '/../..' . '/database/migrations/2017_09_11_190502_create_posts_table.php',
