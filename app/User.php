@@ -35,4 +35,7 @@ public function post(){
 		// to customize table name and columns follow the format bellow
 		// return $this->belongsToMany('App\Role', 'user_roles', user_ud'
 	}
+	public function photos(){
+		return $this->morphMany('App\Photo', 'imageable');
+	}
 }

@@ -16,4 +16,10 @@ class Post extends Model
 	'title',
 	'content'
 	];
+	public function user(){
+		return $this->belongsTo('App\User');
+	}
+	public function photos(){
+		return $this->morphMany('App\Photo', 'imageable');
+	}
 }

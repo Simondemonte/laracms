@@ -12,6 +12,7 @@ return array(
     'AddIsAdminColumnToPostsTables' => $baseDir . '/database/migrations/2017_09_11_190800_add_is_admin_column_to_posts_tables.php',
     'CreateCountriesTable' => $baseDir . '/database/migrations/2017_09_12_181812_create_countries_table.php',
     'CreatePasswordResetsTable' => $baseDir . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
+    'CreatePhotosTable' => $baseDir . '/database/migrations/2017_09_12_183551_create_photos_table.php',
     'CreatePosts1Table' => $baseDir . '/database/migrations/2017_09_09_181718_create_posts1_table.php',
     'CreatePostsTable' => $baseDir . '/database/migrations/2017_09_11_190502_create_posts_table.php',
     'CreateRolesTable' => $baseDir . '/database/migrations/2017_09_12_174757_create_roles_table.php',

@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePostsTable extends Migration
+class CreatePhotosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,12 +12,12 @@ class CreatePostsTable extends Migration
      */
     public function up()
     {
-        Schema::create('posts', function (Blueprint $table) {
+        Schema::create('photos', function (Blueprint $table) {
             $table->increments('id');
-			//$table->integer('user_id')->unsigned(); //only positive numbers
-           $table->string('title');
-		   $table->text('content');
-		   $table->timestamps();
+			$table->string('path');
+			$table->integer('imageable_id');	//Laravel Convention
+			$table->string('imageable_type'); 	//Laravel Convention
+            $table->timestamps();
         });
     }
 
@@ -28,6 +28,6 @@ class CreatePostsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('posts');
+        Schema::drop('photos');
     }
 }

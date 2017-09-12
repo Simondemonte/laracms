@@ -112,6 +112,22 @@ Route::get('/forcedelete', function(){
 				return $post->title;
 			}
 	});
+	
+	// Polymorphic Relationship
+	Route::get('/post/photos', function(){
+		$post = Post::find(1);
+		
+		foreach($post->photos as $photo){
+			return $photo->path;
+		}
+	});
+	Route::get('/user/photos', function(){
+		$user = User::find(1);
+		
+		foreach($user->photos as $photos){
+			return $photo->path;
+		}
+	});
 	//Route::get('/', function () {
 
 //    return view('welcome');
