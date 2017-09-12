@@ -88,6 +88,14 @@ Route::get('/forcedelete', function(){
 	Route::get('user/{id}/post', function($id){
 		return User::find($id)->post->title;
 	});
+		//Many To Many Relationship
+	Route::get('/user/{id}/role', function($id){
+		$user = User::find($id)->roles()->orderBy('id', 'desc')->get();
+		return $user;
+		//foreach($user->roles as $role){
+			//return $role->name;
+		//}
+	});
 	//Route::get('/', function () {
 
 //    return view('welcome');

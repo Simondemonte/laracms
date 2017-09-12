@@ -30,4 +30,7 @@ public function post(){
 		// secara default FOREIGNKEY adalah MODELNAME_id
 		// dalam kasus ini user_id	
 	}
+	public function roles(){
+		return $this->belongsToMany('App\Role');
+	}
 }

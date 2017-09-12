@@ -269,6 +269,8 @@ class ComposerStaticInited320adb7e2ba869b02984ee5a5c9bf1
         'CreatePasswordResetsTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
         'CreatePosts1Table' => __DIR__ . '/../..' . '/database/migrations/2017_09_09_181718_create_posts1_table.php',
         'CreatePostsTable' => __DIR__ . '/../..' . '/database/migrations/2017_09_11_190502_create_posts_table.php',
+        'CreateRolesTable' => __DIR__ . '/../..' . '/database/migrations/2017_09_12_174757_create_roles_table.php',
+        'CreateUsersRolessTable' => __DIR__ . '/../..' . '/database/migrations/2017_09_12_174833_create_users_roless_table.php',
         'CreateUsersTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_000000_create_users_table.php',
         'DatabaseSeeder' => __DIR__ . '/../..' . '/database/seeds/DatabaseSeeder.php',
         'File_Iterator' => __DIR__ . '/..' . '/phpunit/php-file-iterator/src/Iterator.php',
