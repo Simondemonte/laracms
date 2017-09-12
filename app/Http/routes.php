@@ -96,6 +96,14 @@ Route::get('/forcedelete', function(){
 			//return $role->name;
 		//}
 	});
+	
+		//Accessing the Intermediate Table / Pivot
+		Route::get('user/pivot', function(){
+			$user = User::find(1);
+				foreach($user->roles as $role){
+						echo $role->pivot->created_at;
+				}
+		});
 	//Route::get('/', function () {
 
 //    return view('welcome');

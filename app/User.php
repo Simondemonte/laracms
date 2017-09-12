@@ -31,6 +31,8 @@ public function post(){
 		// dalam kasus ini user_id	
 	}
 	public function roles(){
-		return $this->belongsToMany('App\Role');
+		return $this->belongsToMany('App\Role')->withPivot('created_at');
+		// to customize table name and columns follow the format bellow
+		// return $this->belongsToMany('App\Role', 'user_roles', user_ud'
 	}
 }
