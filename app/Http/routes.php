@@ -2,6 +2,7 @@
 use App\Post;
 use App\User;
 use App\Country;
+use App\Photo;
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -88,6 +89,9 @@ Route::get('/forcedelete', function(){
 		// One to One Relationship
 	Route::get('user/{id}/post', function($id){
 		return User::find($id)->post->title;
+	});
+	Route::get('/post/{id}/user', function($id){
+		return Post::find($id)->user->name;
 	});
 		//Many To Many Relationship
 	Route::get('/user/{id}/role', function($id){
