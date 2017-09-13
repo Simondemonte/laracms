@@ -30,6 +30,9 @@ public function post(){
 		// secara default FOREIGNKEY adalah MODELNAME_id
 		// dalam kasus ini user_id	
 	}
+	public function posts(){
+		return $this->hasMany('App\Post');
+	}
 	public function roles(){
 		return $this->belongsToMany('App\Role')->withPivot('created_at');
 		// to customize table name and columns follow the format bellow

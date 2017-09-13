@@ -93,6 +93,13 @@ Route::get('/forcedelete', function(){
 	Route::get('/post/{id}/user', function($id){
 		return Post::find($id)->user->name;
 	});
+		// One to Many Relationship
+		Route::get('/posts', function(){
+			$user = User::find(1);
+			foreach($user->posts as $post){
+				echo $post->title;
+			}
+		});
 		//Many To Many Relationship
 	Route::get('/user/{id}/role', function($id){
 		$user = User::find($id)->roles()->orderBy('id', 'desc')->get();
@@ -125,13 +132,20 @@ Route::get('/forcedelete', function(){
 			return $photo->path;
 		}
 	});
+
 	Route::get('/user/photos', function(){
 		$user = User::find(1);
 		
-		foreach($user->photos as $photos){
+		foreach($user->photos as $photo){
 			return $photo->path;
 		}
 	});
+		//Polymorphic Relation 	the inverse
+		Route::get('photo/{id}/post', function($id){
+			$photo = Photo::findOrFail($id);
+			return $photo->imageable;
+	});
+	
 	//Route::get('/', function () {
 
 //    return view('welcome');
